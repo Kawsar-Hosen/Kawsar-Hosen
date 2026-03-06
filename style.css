@@ -32,7 +32,7 @@ body {
 }
 
 /* style.css ফাইলে এটি যোগ বা পরিবর্তন করুন */
-.profile-img img {
+.profile-img {
     width: 120px; /* ছবির সাইজ */
     height: 120px; /* ছবির উচ্চতাও সমান রাখুন গোল করার জন্য */
     border-radius: 50%; /* ছবি গোল করার জন্য ৫০% */
