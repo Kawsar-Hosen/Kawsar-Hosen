@@ -83,5 +83,22 @@
             <p>&copy; 2026 Kawsar Hosen. All rights reserved.</p>
         </footer>
     </div>
+        <script>
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                // অন্য প্রশ্নগুলো বন্ধ করে দিতে (যদি চান একটির বেশি একসাথে খোলা থাকবে না)
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                // বর্তমান প্রশ্নে ক্লিক করলে খোলা/বন্ধ করা
+                item.classList.toggle('active');
+            });
+        });
+    </script>
 </body>
 </html>
