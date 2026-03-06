@@ -6,8 +6,8 @@
 }
 
 body {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-    color: #fff;
+    background: #151828; /* ছবির মতো ডার্ক ব্যাকগ্রাউন্ড */
+    color: #ffffff;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -17,156 +17,130 @@ body {
 
 .container {
     width: 100%;
-    max-width: 500px;
+    max-width: 450px;
 }
 
 .profile-card {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: #24273b; /* ছবির কার্ডের কালার */
     border-radius: 20px;
-    padding: 40px 20px;
+    padding: 40px 25px;
     text-align: center;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-    animation: fadeIn 1s ease-in;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
 }
 
-/* --- প্রোফাইল ইমেজের সঠিক স্টাইল --- */
+/* --- ছবি পারফেক্ট গোল করার ম্যাজিক --- */
 .profile-img {
-    margin-bottom: 15px; /* নিচের নামের সাথে ব্যবধান */
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
 }
 
-.profile-img img {
-    width: 120px; /* ছবির সাইজ */
-    height: 120px; /* উচ্চতাও সমান রাখুন গোল করার জন্য */
-    border-radius: 50%; /* ছবি গোল করার জন্য ৫০% */
-    object-fit: cover; /* ছবি যাতে লম্বা বা চ্যাপ্টা না দেখায় */
-    border: 4px solid #4db8ff; /* একটি নীল বর্ডার */
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* একটু উন্নত মানের শ্যাডো */
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* ছবি গোল করবে */
+    object-fit: cover; /* ছবি চ্যাপ্টা হতে দেবে না */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 /* --------------------------------- */
 
 h1 {
-    font-size: 2.2rem;
+    font-size: 2rem;
     margin-bottom: 5px;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
 }
 
 .tagline {
-    color: #4db8ff;
-    font-size: 1rem;
-    margin-bottom: 30px;
+    color: #5aa1e3;
+    font-size: 0.85rem;
+    margin-bottom: 25px;
     text-transform: uppercase;
+    font-weight: 600;
 }
-
 
 .contact-info {
     text-align: left;
     margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
 .info-item {
     display: flex;
     align-items: center;
-    margin-bottom: 15px;
     font-size: 0.95rem;
-    background: rgba(255, 255, 255, 0.03);
-    padding: 10px;
-    border-radius: 10px;
-    transition: 0.3s;
-}
-
-.info-item:hover {
-    background: rgba(77, 184, 255, 0.1);
+    background: #2c3046; /* ছবির লিস্টের কালার */
+    padding: 12px 15px;
+    border-radius: 8px;
 }
 
 .info-item i {
-    color: #4db8ff;
+    color: #5aa1e3;
     margin-right: 15px;
+    font-size: 1.1rem;
     width: 20px;
     text-align: center;
 }
 
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
 .social-links a {
-    color: #fff;
+    color: #ffffff;
     font-size: 1.5rem;
-    margin: 0 10px;
     transition: 0.3s;
 }
 
 .social-links a:hover {
-    color: #4db8ff;
-    transform: translateY(-3px);
-    display: inline-block;
-}
-
-.about {
-    margin-top: 20px;
-    padding: 20px;
-    text-align: center;
-}
-
-footer {
-    margin-top: 30px;
-    font-size: 0.8rem;
-    color: #888;
-    text-align: center;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    color: #5aa1e3;
 }
 
 /* FAQ Section Styles */
 .faq-section {
-    margin-top: 30px;
     text-align: center;
-    width: 100%;
+    margin-bottom: 30px;
 }
 
 .faq-section h2 {
     font-size: 1.5rem;
     margin-bottom: 20px;
-    color: #4db8ff;
+    color: #ffffff;
 }
 
 .faq-container {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    text-align: left;
+    gap: 10px;
 }
 
 .faq-item {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: #24273b;
     border-radius: 10px;
     overflow: hidden;
-    transition: all 0.3s ease;
+    text-align: left;
 }
 
 .faq-question {
     width: 100%;
     background: none;
     border: none;
-    color: #fff;
-    font-size: 1rem;
-    padding: 15px 20px;
+    color: #ffffff;
+    font-size: 0.95rem;
+    padding: 15px;
     text-align: left;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: background 0.3s ease;
-}
-
-.faq-question:hover {
-    background: rgba(77, 184, 255, 0.1);
 }
 
 .faq-question i {
-    color: #4db8ff;
+    color: #5aa1e3;
     transition: transform 0.3s ease;
 }
 
@@ -174,23 +148,26 @@ footer {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-out, padding 0.3s ease;
-    background: rgba(0, 0, 0, 0.2);
 }
 
 .faq-answer p {
-    padding: 0 20px;
-    margin: 0;
-    color: #ccc;
-    font-size: 0.9rem;
+    padding: 0 15px;
+    color: #cccccc;
+    font-size: 0.85rem;
     line-height: 1.5;
 }
 
-/* Active State for Animation */
 .faq-item.active .faq-answer {
     max-height: 200px;
-    padding: 15px 0;
+    padding: 10px 0 15px 0;
 }
 
 .faq-item.active .faq-question i {
     transform: rotate(180deg);
+}
+
+footer {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #777;
 }
