@@ -1,33 +1,79 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kawsar Hosen</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
 <style>
-body{
-background:linear-gradient(135deg,#ffffff,#f3f3f3);
-font-family:sans-serif;
-text-align:center;
-padding:40px;
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
 }
 
-.profile{
-width:130px;
-height:130px;
+body{
+background:linear-gradient(135deg,#ffffff,#f1f1f1);
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+padding:20px;
+}
+
+.container{
+max-width:420px;
+width:100%;
+text-align:center;
+}
+
+.header{
+font-size:28px;
+font-weight:700;
+margin-bottom:20px;
+}
+
+.logo{
+width:90px;
+height:90px;
 border-radius:50%;
-background:#ddd;
-margin:auto;
-box-shadow:0 10px 30px rgba(0,0,0,0.1);
+object-fit:cover;
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+margin-bottom:15px;
 }
 
 .card{
-backdrop-filter:blur(10px);
-border:1px solid #ddd;
-border-radius:12px;
-padding:15px;
-margin:20px auto;
-width:280px;
+background:rgba(255,255,255,0.6);
+backdrop-filter:blur(15px);
+border-radius:15px;
+padding:18px;
+margin-top:15px;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-4px);
+}
+
+.title{
+font-weight:600;
+margin-bottom:8px;
+}
+
+.info{
+font-size:14px;
+color:#444;
+}
+
+.footer{
+margin-top:25px;
+font-size:13px;
+color:#777;
 }
 
 </style>
@@ -35,22 +81,41 @@ width:280px;
 
 <body>
 
-<h1>Kawsar Hosen</h1>
+<div class="container">
 
-<div class="profile"></div>
+<div class="header">
+Kawsar Hosen
+</div>
+
+<img src="profile.jpg" class="logo">
 
 <div class="card">
-Developer • Building modern web experiences
+<div class="title">About Me</div>
+<div class="info">
+Hi, I'm Kawsar Hosen.  
+Developer & digital creator building modern web experiences.
+</div>
 </div>
 
 <div class="card">
-<h3>My Documents</h3>
-<p>My projects and work will appear here.</p>
+<div class="title">Contact</div>
+<div class="info">
+📧 Email: your@email.com<br>
+📞 Phone: +88000000000
+</div>
 </div>
 
 <div class="card">
-<h4>Address</h4>
-<p>Bangladesh</p>
+<div class="title">Address</div>
+<div class="info">
+Bangladesh
+</div>
+</div>
+
+<div class="footer">
+© 2026 Kawsar Hosen
+</div>
+
 </div>
 
 </body>
