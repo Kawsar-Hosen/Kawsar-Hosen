@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Language AI Chatbot</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .chat-header { background-color: #4CAF50; color: white; padding: 10px; text-align: center; }
+        .chat-container { margin: 20px; border: 1px solid #ccc; padding: 10px; }
+        .chat-box { height: 300px; overflow-y: auto; border: 1px solid #ccc; padding: 5px; margin-bottom: 10px; }
+        .input-container { display: flex; }
+        .input-container input { flex: 1; padding: 10px; }
+        .input-container button { padding: 10px; }
+    </style>
+</head>
+<body>
+    <div class="chat-header">
+        <h2>AI Chatbot <span>🤖</span></h2>
+    </div>
+    <div class="chat-container">
+        <div class="chat-box" id="chat-box">
+            <!-- Chat messages will appear here -->
+        </div>
+        <div class="input-container">
+            <input type="text" id="user-input" placeholder="Type your message..." />
+            <button id="send-btn">Send</button>
+        </div>
+    </div>
+    <script>
+        const apiKey = 'AIzaSyCe-ZuArKxFWf0yfvbNPTdWIuvhk7YTxzM'; // Gemini API key
+        const chatBox = document.getElementById('chat-box');
+        const sendBtn = document.getElementById('send-btn');
+        const userInput = document.getElementById('user-input');
+
+        sendBtn.addEventListener('click', () => {
+            const message = userInput.value;
+            if (message) {
+                appendMessage('You: ' + message);
+                fetchResponse(message);
+                userInput.value = '';
+            }
+        });
+
+        function appendMessage(message) {
+            const messageElement = document.createElement('div');
+            messageElement.textContent = message;
+            chatBox.appendChild(messageElement);
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+
+        function fetchResponse(message) {
+            // Example placeholder for API request, implement actual API call
+            const response = 'AI: This is a placeholder response.'; // Simulate AI response
+            appendMessage(response);
+        }
+    </script>
+</body>
+</html>
